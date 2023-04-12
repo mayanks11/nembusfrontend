@@ -1,0 +1,55 @@
+@import "./scss/variables.scss";
+
+.simulationNode{
+	border: solid 3px $node-border;
+	border-radius: 3px;
+	width: 200px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	position: relative;
+	display: inline-block;
+	background-color: $node-background;
+	color: $node-textcolor;
+
+	&--selected {
+		border: solid 3px $nodeSelection-color;
+	}
+
+	&__titleNode {
+		text-align: center;
+		background: #2d4571aa;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__body {
+		width: 100%;
+
+		&__visualisation {
+			margin-left: auto;
+			margin-right: auto;
+			display: table;
+			padding: 20px;
+		}
+	}
+
+	&__ports {
+		font-size: 12px;
+	}
+
+	&__inputPorts {
+		width: 50%;
+		margin-top: 5px;
+	}
+
+	&__outputPorts {
+		width: 50%;
+		margin-top: 5px;
+		float: right;
+
+		.simPortLabel {
+			float: right;
+		}
+	}
+}

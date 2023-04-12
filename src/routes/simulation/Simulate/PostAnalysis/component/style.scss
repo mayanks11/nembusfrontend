@@ -1,0 +1,246 @@
+#analysis {
+  background-color: white;
+  .makeStyles-innerWrapper-252 {
+    gap: 0;
+  }
+  // .content {
+  //   canvas,
+  //   div {
+  //     height: 400px !important;
+  //   }
+  // }
+  .mainLoader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #analysisDrawer {
+    padding: 0;
+    width: 25%;
+    background-color: white;
+    .MuiDivider-root {
+      margin: 1rem 0 0;
+      height: 0;
+    }
+    .MuiDrawer-paper {
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    #Tree {
+      .MuiTreeItem-label {
+        font-weight: 500;
+        font-size: 16px;
+        margin: 0.2rem 0;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    .lastChild {
+      font-weight: 600;
+      font-size: 14px;
+      // text-align: center;
+      margin: 0.4rem 0;
+      cursor: grab;
+    }
+  }
+  #mainContent {
+    width: 75%;
+    margin-top: 0;
+    padding: 0;
+    #dropZone {
+      min-width: 50px;
+      min-height: 50px;
+      box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.1) inset;
+      padding: 1rem;
+      font-weight: 500;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      // border: 1px dashed;
+      justify-content: flex-start;
+      gap: 1rem;
+      background: white;
+      .droppedItem{
+        width: fit-content;
+        padding: 4px 8px;
+        border: 1px solid;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background: dimgrey;
+        color: white;
+        box-shadow: 0px 0px 4px dimgrey;
+        .actions {
+          display: flex;
+          gap: 6px;
+          .icon {
+            cursor: pointer;
+            color: white;
+            background: black;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            padding: 0.2rem;
+          }
+        }
+      }
+    }
+    .content {
+      background-color: white;
+      .reflex-container.horizontal {
+        min-height: 87vh;
+      }
+    }
+    .sheetsContainer {
+      // margin-bottom: 1rem;
+      .MuiTabs-root {
+        // max-width: 74%;
+      }
+      .selectedSheetContainer {
+        // margin-bottom: 1rem;
+        button {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .renameSheet {
+          .MuiFormControl-root.MuiTextField-root {
+            input {
+              height: 30px;
+              padding: 0.4rem;
+            }
+          }
+          .renameSheetSave {
+            height: 40px;
+            // font-size: 16px;
+            // padding: 0.4rem;
+          }
+        }
+        .selectSheet_controller {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+        }
+      }
+      .sheetTabs {
+        display: flex;
+        // gap: 1rem;
+        // margin: 1rem 0;
+        // background: #5D92F4;
+        background: #464d69;
+        .MuiTabs-indicator {
+          background-color: transparent !important;
+        }
+        svg {
+          color: white;
+        }
+        .sheetTab {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: fit-content;
+          gap: 2rem;
+          height: 30px;
+          color: white;
+          padding: 0 1rem;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 500;
+          .editableTab {
+            border: 1px solid black;
+            padding: 4px 6px;
+            border-radius: 8px;
+            padding: 4px 8px;
+          }
+          .dropdown {
+            &::before,
+            &::after {
+              border: 0;
+            }
+            .MuiSelect-root {
+              &:focus {
+                background-color: transparent;
+              }
+            }
+            select {
+              // padding: 2rem  !important;
+              &:focus {
+                background-color: transparent;
+              }
+              .dropdownOptions {
+                margin: 0.5rem;
+              }
+            }
+          }
+        }
+        .Mui-selected {
+          background-color: rgba(0, 0, 0, 0.04);
+          .sheetTab {
+            color: white;
+          }
+        }
+        .sheetTab.addNewSheet {
+          width: 100px;
+          justify-content: center;
+          position: relative;
+          .addNewSheetLoader {
+            width: 30px !important;
+            height: 30px !important;
+            left: 35px;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+// .selectSheet{
+//   min-width: 100px;
+//   .MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded{
+//     top: 185px !important;
+//     left: 700px !important;
+//   }
+// }
+.DropdownComponent {
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 0 0 0 1rem;
+  .header {
+  }
+  .DropdownContent {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border: 1px solid;
+  }
+}
+.analysisFormModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modalContainer {
+    background: white;
+    padding: 5rem 3rem 3rem;
+    .row {
+      margin-top: 2rem;
+      button {
+        margin-left: auto;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.SplitPane{
+  position: relative  !important;
+  min-height: 100vh !important;
+}

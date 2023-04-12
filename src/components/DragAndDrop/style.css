@@ -1,0 +1,320 @@
+.fw-wrapper {
+
+  --offset-x: 0px;
+  --offset-y: 0px;
+  --grid-size: 15px;
+
+  background-size: calc(var(--grid-size) * 3)
+    calc(var(--grid-size) * 3);
+  background-position-x: var(--offset-x);
+  background-position-y: var(--offset-y);
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-color: rgb(60, 60, 60) !important;
+  overflow: hidden !important;
+  width: 100%;
+}
+
+.zoom-lock{
+  position: absolute;
+  /* top: 5.5%; */
+  top: 0%;
+  left: 0%;
+  background-color: transparent;
+  border-radius: 1px;
+  margin-top: 2px;
+}
+
+.zoom-in{
+  position: absolute;
+  /* top: 5.5%; */
+  top: 0%;
+  left: 0%;
+  background-color: transparent;
+  border-radius: 1px;
+  margin-top: 37px;
+}
+
+.zoom-out{
+  position: absolute;
+  /* top: 5.5%; */
+  top: 0%;
+  left: 0%;
+  background-color: transparent;
+  border-radius: 1px;
+  margin-top: 72px;
+}
+
+.zoom-lock-button{
+  color: white;
+}
+
+.minimap{
+  position: absolute;
+  /* top: 50%; */
+  bottom: 0%;
+  left: 0%;
+  background-color: transparent;
+  margin-left: 5px;
+  min-width: 200px;
+  margin-bottom: 155px;
+}
+
+/* @media screen and (min-width: 300px) {
+  .minimap{
+    position: absolute;
+    top: 64%;
+    left: 0%;
+    background-color: transparent;
+    margin-left: 5px;
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .minimap{
+    position: absolute;
+    top: 64%;
+    left: 0%;
+    background-color: transparent;
+    margin-left: 5px;
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .minimap{
+    position: absolute;
+    top: 66%;
+    left: 0%;
+    background-color: transparent;
+    margin-left: 5px;
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .minimap{
+    position: absolute;
+    top: 68.5%;
+    left: 0%;
+    background-color: transparent;
+    margin-left: 5px;
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .minimap{
+    position: absolute;
+    top: 76%;
+    left: 0%;
+    background-color: transparent;
+    margin-left: 5px;
+    min-width: 200px;
+  }
+} */
+
+.fw-wrapper {
+  position: relative;
+}
+.fav-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  min-height: fit-content;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: grid;
+  place-items: center;
+  background-color: #464d69;
+}
+.modal-body {
+  width: 700px;
+  height: auto;
+  background-color: #fff;
+  max-height: 500px;
+  /* outline: auto; */
+  overflow-y: scroll;
+  border-radius: 20px !important;
+}
+.modal-backdrop {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: transparent !important;
+}
+.fw-port {
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  background: rgba(51, 255, 0, 0.5);
+}
+
+.fw-port--limited {
+  background: rgba(255, 238, 0, 0.5);
+}
+
+.fw-port--input {
+}
+
+.fw-port--output {
+}
+
+.fw-port--input:hover {
+  background: rgb(2, 59, 0);
+}
+
+.fw-port--output:hover {
+  background: rgb(117, 109, 0);
+}
+
+.fw-port__label {
+  position: absolute;
+  top: 0px;
+}
+
+.fw-port--output .fw-port__label {
+  text-align: right;
+  right: 20px;
+}
+
+.fw-port--input .fw-port__label {
+  left: 20px;
+}
+
+.card {
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.3),
+    0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.card.is-active {
+  box-shadow: 0.5em 1em 1em -0.125em rgba(10, 10, 10, 0.5),
+    0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+/* .fw-wrapper {
+  position: relative;
+  overflow: hidden;
+} */
+.fw-details-wrapper {
+  background: rgb(240, 240, 240);
+  position: absolute;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 250px;
+  z-index: 1;
+  padding: 20px;
+  -webkit-transition: all 0.3s ease;
+}
+.fw-details-wrapper.active {
+  right: 0;
+  -webkit-transition: all 0.3s ease;
+  overflow: auto;
+}
+
+.fw-block {
+  background: rgb(220, 220, 220);
+  height: calc(100% - 20px);
+  overflow-y: scroll;
+}
+
+.fw-block__search {
+  padding: 0 10px;
+}
+
+.fw-toolbar {
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+/* .MuiAccordionDetails-root {
+  display: block;
+} */
+.MuiAccordionSummary-content {
+  margin: 5px 0 !important;
+}
+.fw-toolbar__btn-group {
+  margin-bottom: 5px;
+}
+
+.fw-toolbar .MuiButtonGroup-root:not(:first-child) {
+  margin-left: 10px;
+}
+
+.fw-param {
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #00000038;
+}
+ul {
+  list-style: none;
+  padding-left: 5px;
+}
+.fw-param__label {
+  margin-bottom: 3px;
+}
+.fw-block_ul {
+  list-style: none;
+  width: 100%;
+  padding: 10px 10px 0px 10px;
+}
+.fw-block_ul > li {
+  border-bottom: solid 1px gray;
+}
+.fw-block_ul-sub {
+  list-style: none;
+  width: 96%;
+  margin: auto;
+}
+.fw-block_ul-sub-item {
+  font-size: 12px;
+  color: white;
+  padding: 2px;
+  background: #27395e;
+  border-radius: 2px;
+  margin: 4px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+.fw-block_ul-sub-item p {
+  margin: 0;
+}
+.type-header {
+  font-size: 18px;
+  font-weight: bold;
+}
+.subtype {
+  font-size: 12px;
+}
+/* .fw-block_ul-sub-item > svg {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+} */

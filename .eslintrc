@@ -1,0 +1,11 @@
+{
+   "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:react-recommmended"
+   ],
+   "rules": {
+      "react/no-deprecated": 0,
+      "quotes": [ 1, "single", "avoid-escape" ]
+   }
+}

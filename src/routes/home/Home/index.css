@@ -1,0 +1,27 @@
+.flex {
+    display: flex;
+}
+
+.block {
+    padding: .7rem;
+    background: #484e69;
+    color: #ffffff;
+    margin: 1rem;
+    min-width: 20rem;
+    cursor: pointer;
+}
+
+.block a {
+    height: 3rem;
+    color: #ffffff !important;
+    margin-left: 1rem;
+}
+
+.clear {
+    clear: both;
+}
+
+.block .icon {
+    float: right;
+    color: black;
+}

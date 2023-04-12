@@ -1,0 +1,65 @@
+html,
+body,
+#root,
+.App {
+  margin: 0;
+  padding: 0;
+}
+
+foreignObject p {
+  margin-top: 15px;
+  width: 200px;
+  height: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+foreignObject p:hover {
+  width: auto;
+  height: auto;
+  white-space: normal;
+  overflow: visible;
+}
+
+use, text {
+  cursor: pointer;
+}
+
+text {
+  color: #464D69;
+}
+
+.pane-control {
+  /* background-color: #191970; */
+  background-color: #464D69;
+  padding: 5px;
+}
+
+.pane-control > .button {
+  transition-timing-function: ease;
+  transition-duration: 1s;
+  transition-property: all;
+  transition-delay: 0s;
+  position: relative;
+  color: white;
+  margin-right: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+  outline: none;
+  float: right;
+}
+
+.pane-control > .button > label {
+  transition-timing-function: ease;
+  transition-duration: 1s;
+  transition-property: all;
+  transition-delay: 0s;
+  position: relative;
+}
+
+.element-pane{
+  height: calc(100vh - 140px);
+  overflow: scroll;
+}

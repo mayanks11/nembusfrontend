@@ -1,0 +1,37 @@
+.status {
+    background-color: green;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+}
+.flex {
+    display: flex;
+}
+.card {
+    margin: 10px 20px;
+    height: 300px;
+}
+.row {
+    padding: 5px 10px;
+}
+.active {
+    color: #fff;
+    padding: 5px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    font-weight: 900;
+    background-color: green;
+}
+.error {
+    color: #fff;
+    padding: 2px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    font-weight: 900;
+    background-color: red;
+}
+.latest {
+    padding: 10px 20px !important;
+}

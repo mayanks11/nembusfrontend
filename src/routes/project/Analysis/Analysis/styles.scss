@@ -1,0 +1,243 @@
+
+    #mainContent {
+      width: 100%;
+      margin-top: 0;
+      padding: 0;
+      #dropZone {
+        min-width: 50px;
+        min-height: 50px;
+        box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.1) inset;
+        padding: 1rem;
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        // border: 1px dashed;
+        justify-content: flex-start;
+        gap: 1rem;
+        background: white;
+        .droppedItem{
+          width: fit-content;
+          padding: 4px 8px;
+          border: 1px solid;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          background: dimgrey;
+          color: white;
+          box-shadow: 0px 0px 4px dimgrey;
+          .actions {
+            display: flex;
+            gap: 6px;
+            .icon {
+              cursor: pointer;
+              color: white;
+              background: black;
+              border-radius: 50%;
+              font-size: 1.5rem;
+              padding: 0.2rem;
+            }
+          }
+        }
+      }
+      .content {
+        background-color: white;
+        .reflex-container.horizontal {
+          min-height: 87vh;
+        }
+      }
+      .sheetsContainer {
+        .MuiTabs-root {
+        }
+        .selectedSheetContainer {
+          button {
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .renameSheet {
+            .MuiFormControl-root.MuiTextField-root {
+              input {
+                height: 30px;
+                padding: 0.4rem;
+              }
+            }
+            .renameSheetSave {
+              height: 40px;
+            }
+          }
+          .selectSheet_controller {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+          }
+        }
+        .sheetTabs {
+          display: flex;
+          // gap: 1rem;
+          // margin: 1rem 0;
+          // background: #5D92F4;
+          background: #464d69;
+          .MuiTabs-indicator {
+            background-color: transparent !important;
+          }
+          svg {
+            color: black;
+          }
+          .sheetTab {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: fit-content;
+            gap: 2rem;
+            height: 30px;
+            color: white;
+            padding: 0 1rem;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            .editableTab {
+              border: 1px solid black;
+              padding: 4px 6px;
+              border-radius: 8px;
+              padding: 4px 8px;
+            }
+            .dropdown {
+              &::before,
+              &::after {
+                border: 0;
+              }
+              .MuiSelect-root {
+                &:focus {
+                  background-color: transparent;
+                }
+              }
+              select {
+                &:focus {
+                  background-color: transparent;
+                }
+                .dropdownOptions {
+                  margin: 0.5rem;
+                }
+              }
+            }
+          }
+          .Mui-selected {
+            background-color: rgba(0, 0, 0, 0.04);
+            .sheetTab {
+              color: white;
+            }
+          }
+          .sheetTab.addNewSheet {
+            width: 100px;
+            justify-content: center;
+            position: relative;
+            .addNewSheetLoader {
+              width: 30px !important;
+              height: 30px !important;
+              left: 35px;
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+
+  
+  .SplitPane{
+    position: relative  !important;
+    min-height: 100vh !important;
+  }
+
+  .dropzone {
+    text-align: center;
+    padding: 20px;
+    border: 3px dashed #eeeeee;
+    background-color: #fafafa;
+    color: #bdbdbd;
+    width: 100%;
+    height: 55px;
+    min-height: 55px;
+  }
+  
+  .accept {
+    background-color: #D1EBDE !important;
+  }
+  
+  .reject {
+    background-color: #e8c2b4 !important;
+  }
+
+  .submit-button {
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .extra-window :hover{
+    cursor: grab;
+   }
+   
+  .extra-window :active{
+   cursor: grabbing;
+  }
+
+  .preview_appbar {
+    background-color: #464D69;
+    cursor: pointer;
+  }
+
+  .preview_appbar_close_button{
+    display: flex;
+    float: right;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    border: "1px solid #ffffff";
+    border-radius: 12px;  
+  }
+
+  .preview_appbar_upload_button {
+    display: flex;
+    float: right;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    border: "1px solid #ffffff";
+    border-radius: 12px;    
+  }
+
+  .preview_appbar_checkbox {
+    display: flex;
+    float: left;
+    padding: 10px;
+    color: white;
+  }
+
+  .preview_appbar_info {
+    float: left;
+    margin: 8px;
+    opacity: 0.7;
+  }
+
+  .chart-container{
+    position: relative;
+  }
+
+  .chart-axis{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+  }
+
+  .chart-main{
+    opacity: 1;
+  }
+
+  .chart-axis :hover{
+    opacity: 1;
+  }

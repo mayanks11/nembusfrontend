@@ -1,0 +1,74 @@
+html,
+body,
+#root,
+.App {
+  margin: 0;
+  padding: 0;
+}
+
+text {
+  color: #464D69;
+}
+
+.pane-control {
+  background-color: #464D69;
+  padding: 5px;
+}
+
+.pane-control > .button {
+  transition-timing-function: ease;
+  transition-duration: 1s;
+  transition-property: all;
+  transition-delay: 0s;
+  position: relative;
+  color: white;
+  margin-right: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+  outline: none;
+  float: right;
+}
+
+.pane-control > .button > label {
+  transition-timing-function: ease;
+  transition-duration: 1s;
+  transition-property: all;
+  transition-delay: 0s;
+  position: relative;
+}
+
+.element-pane{
+  height: calc(100vh - 140px);
+  overflow: scroll;
+}
+
+.splitter{
+  position: relative;
+  top: 50%;
+  left: calc(50% - 10px);
+  z-index: -1;
+  background: #ddd;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+}
+
+.tool_btn{
+  border: "1px solid #ffffff";
+  border-radius: "12px";
+  color: "#ffffff";
+}
+
+.tool_btn :hover{
+  background-color: "#ffffff";
+  color: "#183b56";
+  border-color: "#183b56";
+}
+
+.extra-window :hover{
+ cursor: grab;
+}
+
+.extra-window :active{
+  cursor: grabbing;
+ }
